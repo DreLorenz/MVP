@@ -6,12 +6,14 @@ const connectionString = 'postgres://postgres:docker@localhost:5432/workouttrack
 
 const config = require('./database/config')[process.env.NODE_ENV || "dev"]
 const PORT = config.port;
+const CONNECTION_STRING = config.connectionString;
+console.log(CONNECTION_STRING)
 
 
 const client = new Client({
-    connectionString: config.connectionString,
+    connectionString: CONNECTION_STRING,
 })
-console.log(connectionString)
+console.log(client)
 
 var cors = require('cors');
 
