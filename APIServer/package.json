@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "start": "nodemon app.js",
+    "start:production": "node app.js",
+    "start:dev": "NODE_ENV=dev nodemon app.js",
+    "start:test": "NODE_ENV=test nodemon app.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
