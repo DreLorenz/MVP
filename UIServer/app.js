@@ -7,7 +7,7 @@ function getEntries() {
 
     var updateEntry = document.createElement('button')
     updateEntry.setAttribute('type', 'submit')
-    updateEntry.setAttribute('id', 'deletebtn')
+    updateEntry.setAttribute('id', 'updatebtn')
     updateEntry.classList.add("button")
     updateEntry.innerText = "Update Entry"
 

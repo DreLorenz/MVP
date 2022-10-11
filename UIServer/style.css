@@ -2,7 +2,29 @@ body {
     background-image: url(images/gym.jpg);
     width: 1000px;
     height: 400px;
+    font-size: 20px;
+    margin-left: 650px;
 }
+
+#header {
+    padding: 40px;
+    margin-left: 250px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 900;
+    color: #fff;
+    margin-left: 30px;
+}
+
+#addbut {
+    font-family: 'Cinzel', serif;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+    margin-left: 10px;
+    width: 400px;
+    height: 40px;
+}
+
 
 
 #results {
@@ -13,4 +35,188 @@ body {
     padding: 20px;
     margin: 10px;
     display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+
+
+/* CSS */
+#btn_submit {
+    background-color: #cf245f;
+    background-image: linear-gradient(to bottom right, #fcd34d, #ef4444, #ec4899);
+    border: 0;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.125rem;
+    /* 18px */
+    font-weight: 600;
+    line-height: 1.75rem;
+    /* 28px */
+    padding: 1rem 1.25rem;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 250px;
+}
+
+.btn_submit:hover {
+    box-shadow: none;
+}
+
+
+
+
+/* CSS */
+#add {
+    padding: 0.7em 3em;
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 35px;
+
+}
+
+#add:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#add:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+
+/* CSS */
+#deletebtn {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    margin-left: 100px
+}
+
+#deletebtn:hover,
+#deletebtn:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+#deletebtn:active {
+    opacity: .5;
+}
+
+
+#updatebtn {
+    background: rgb(79, 103, 240);
+    border: 1px solid rgb(79, 103, 240);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    margin-left: 110px;
+}
+
+#updatebtn:hover,
+#updatebtn:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: rgb(79, 103, 240);
+}
+
+#updatebtn:active {
+    opacity: .5;
 }
