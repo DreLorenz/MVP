@@ -18,7 +18,7 @@ const app = express();
 client.connect();
 
 
-app.use(express.static("UIServer"))
+app.use(express.static("public"))
 
 app.use(express.json());
 app.use(cors());
