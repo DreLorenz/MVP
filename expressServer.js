@@ -5,7 +5,7 @@ const { Client } = require('pg')
 const connectionString = 'postgres://postgres:docker@localhost:5432/workouttracker'
 
 const config = require('./database/config')[process.env.NODE_ENV || DEV]
-const PORT = config.prototype;
+const PORT = config.PORT;
 
 
 const client = new Client({
