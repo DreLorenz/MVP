@@ -3,8 +3,13 @@ const PORT = 3007;
 const express = require('express');
 const { Client } = require('pg')
 const connectionString = 'postgres://postgres:docker@localhost:5432/workouttracker'
+
+//const config = require('./config')[process.env.NODE_ENV || DEV]
+//const PORT = config.prototype;
+
+
 const client = new Client({
-    connectionString: connectionString
+    connectionString: connectionString,
 })
 
 var cors = require('cors');
@@ -12,6 +17,8 @@ var cors = require('cors');
 const app = express();
 client.connect();
 
+
+app.use(express.static("UIServer"))
 
 app.use(express.json());
 app.use(cors());

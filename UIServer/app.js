@@ -1,3 +1,9 @@
+// const ENV = "production"
+// const ENV = "dev"
+
+// let APIUrl = ENV == "dev" ? "http://localhost:3007": 
+
+
 var result;
 
 var resultsDiv = document.getElementById("results")
