@@ -3,7 +3,8 @@
     "start": "nodemon expressServer.js",
     "start:production": "node expressServer.js",
     "start:dev": "NODE_ENV=dev nodemon expressServer.js",
-    "start:test": "NODE_ENV=test nodemon expressServer.js"
+    "start:test": "NODE_ENV=test nodemon expressServer.js",
+    "start:prodtest": "NODE_ENV=prodtest nodemon expressServer.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

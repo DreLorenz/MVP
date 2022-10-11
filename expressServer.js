@@ -5,10 +5,10 @@ const { Client } = require('pg')
 const connectionString = 'postgres://postgres:docker@localhost:5432/workouttracker'
 
 const config = require('./database/config')[process.env.NODE_ENV || "dev"]
-const PORT = config.port;
+const PORT = config.PORT;
 const CONNECTION_STRING = config.connectionString;
 console.log(CONNECTION_STRING)
-
+console.log(config)
 
 const client = new Client({
     connectionString: CONNECTION_STRING,
@@ -19,6 +19,8 @@ var cors = require('cors');
 
 const app = express();
 client.connect();
+
+
 
 
 app.use(express.static("public"))
