@@ -1,5 +1,5 @@
 const ENV = "production"
-// const ENV = "dev"
+//const ENV = "dev"
 
 let APIUrl = ENV === "dev" ? "http://localhost:3007" : 'https://mvp-sxdv.onrender.com'
 console.log("API:", APIUrl);
