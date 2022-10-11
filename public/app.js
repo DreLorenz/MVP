@@ -47,8 +47,14 @@ function getEntries() {
                 })
                     .then(getEntries)
                 alert(`Entry ${updatePrompt} updated!`)
+                    .catch((error) => {
+                        res.send(error)
+                    })
 
             })
+                .catch((error) => {
+                    res.send(error)
+                })
 
 
             resultsDiv.append(deleteEntry)
@@ -60,8 +66,17 @@ function getEntries() {
                 })
                     .then(getEntries)
                 alert(`Entry ${deletePrompt} deleted!`)
+                    .catch((error) => {
+                        res.send(error)
+                    })
 
             })
+                .catch((error) => {
+                    res.send(error)
+                })
+        })
+        .catch((error) => {
+            res.send(error)
         })
 }
 
@@ -86,4 +101,10 @@ createNew.addEventListener('click', () => {
         body: JSON.stringify(newEntry)
     })
         .then(getEntries)
+        .catch((error) => {
+            res.send(error)
+        })
 })
+    .catch((error) => {
+        res.send(error)
+    })
