@@ -1,0 +1,16 @@
+body {
+    background-image: url(images/gym.jpg);
+    width: 1000px;
+    height: 400px;
+}
+
+
+#results {
+    width: 600px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+}
