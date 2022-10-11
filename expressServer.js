@@ -32,6 +32,9 @@ app.get('/journal', (req, res) => {
         .then(result => {
             res.send(result.rows)
         })
+        .catch((error) => {
+            res.send(error)
+        })
 })
 
 app.post('/journal', (req, res) => {
@@ -43,6 +46,7 @@ app.post('/journal', (req, res) => {
             }
             res.status(201).send('Entry Added')
         })
+
 })
 
 
