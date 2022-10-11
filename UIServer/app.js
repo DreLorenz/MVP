@@ -1,7 +1,8 @@
-// const ENV = "production"
+const ENV = "production"
 // const ENV = "dev"
 
-// let APIUrl = ENV == "dev" ? "http://localhost:3007": 
+let APIUrl = ENV === "dev" ? "http://localhost:3007" : 'https://mvp-sxdv.onrender.com'
+console.log("API:", APIUrl);
 
 
 var result;
@@ -25,7 +26,7 @@ function getEntries() {
     deleteEntry.innerText = "Delete Entry"
 
 
-    fetch('http://localhost:3007/journal')
+    fetch(`${APIUrl}/journal`)
         .then(res => res.json())
         .then(data => {
             data.map(journal => {
@@ -39,7 +40,7 @@ function getEntries() {
                 let typeUpdatedEntry = prompt("type here")
                 let updatedEntry = { "journal_input": typeUpdatedEntry }
 
-                fetch(`http://localhost:3007/journal/${updatePrompt}`, {
+                fetch(`${APIUrl}/journal/${updatePrompt}`, {
                     method: 'PATCH',
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify(updatedEntry)
@@ -54,7 +55,7 @@ function getEntries() {
             deleteEntry.addEventListener('click', () => {
                 let deletePrompt = prompt("Which data entry would you like to delete?");
 
-                fetch(`http://localhost:3007/journal/${deletePrompt}`, {
+                fetch(`${APIUrl}/journal/${deletePrompt}`, {
                     method: 'DELETE'
                 })
                     .then(getEntries)
@@ -79,7 +80,7 @@ createNew.addEventListener('click', () => {
     let newEntry = { "journal_input": input.value }
     console.log(newEntry)
 
-    fetch('http://localhost:3007/journal', {
+    fetch(`${APIUrl}/journal`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(newEntry)

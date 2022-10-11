@@ -1,15 +1,15 @@
-const PORT = 3007;
+//const PORT = 3007;
 
 const express = require('express');
 const { Client } = require('pg')
 const connectionString = 'postgres://postgres:docker@localhost:5432/workouttracker'
 
-//const config = require('./config')[process.env.NODE_ENV || DEV]
-//const PORT = config.prototype;
+const config = require('./config')[process.env.NODE_ENV || DEV]
+const PORT = config.prototype;
 
 
 const client = new Client({
-    connectionString: connectionString,
+    connectionString: config.connectionString,
 })
 
 var cors = require('cors');
