@@ -47,9 +47,6 @@ function getEntries() {
                 })
                     .then(getEntries)
                 alert(`Entry ${updatePrompt} updated!`)
-                    .catch((error) => {
-                        res.send(error)
-                    })
 
             })
                 .catch((error) => {
@@ -66,14 +63,9 @@ function getEntries() {
                 })
                     .then(getEntries)
                 alert(`Entry ${deletePrompt} deleted!`)
-                    .catch((error) => {
-                        res.send(error)
-                    })
 
             })
-                .catch((error) => {
-                    res.send(error)
-                })
+
         })
         .catch((error) => {
             res.send(error)
