@@ -1,5 +1,5 @@
 const ENV = "production"
-//const ENV = "dev"
+// const ENV = "dev"
 
 let APIUrl = ENV === "dev" ? "http://localhost:3007" : 'https://mvp-sxdv.onrender.com'
 console.log("API:", APIUrl);
@@ -93,9 +93,7 @@ createNew.addEventListener('click', () => {
         body: JSON.stringify(newEntry)
     })
         .then(getEntries)
-        .catch((error) => {
-            res.send(error)
-        })
+
 })
     .catch((error) => {
         res.send(error)
