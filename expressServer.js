@@ -26,11 +26,12 @@ app.use(express.static("public"))
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send("Whats up!")
-})
+// app.get('/', (req, res) => {
+//     res.send("Whats up!")
+// })
 
 app.get('/journal', (req, res) => {
+    console.log("requesting journal from database")
     client.query('SELECT * FROM journal')
         .then(result => {
             res.send(result.rows)
