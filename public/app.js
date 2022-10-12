@@ -67,9 +67,7 @@ function getEntries() {
             })
 
         })
-        .catch((error) => {
-            res.send(error)
-        })
+
 }
 
 
@@ -95,6 +93,4 @@ createNew.addEventListener('click', () => {
         .then(getEntries)
 
 })
-    .catch((error) => {
-        res.send(error)
-    })
+
