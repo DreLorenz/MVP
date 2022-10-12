@@ -49,9 +49,7 @@ function getEntries() {
                 alert(`Entry ${updatePrompt} updated!`)
 
             })
-                .catch((error) => {
-                    res.send(error)
-                })
+
 
 
             resultsDiv.append(deleteEntry)
